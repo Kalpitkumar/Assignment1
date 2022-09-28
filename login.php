@@ -75,6 +75,7 @@ else if(isset($_POST['submit']))
         <nav class="navigation">
             <a href="#">
                 <img src="images/logo.png" alt="">
+                <img src="images/logo.png" alt="">
             </a>
             <ul id="navbar">
                 <li><a href="men.php">Men</a></li>

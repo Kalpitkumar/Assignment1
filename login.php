@@ -59,7 +59,15 @@ else if(isset($_POST['submit']))
                 <li><a href="account.php">My Account</a></li>
                 <li><a href="eTransfer.php">E-Transfer</a></li>
                 <li><a href="contact.php">Contact</a></li>
-            </ul>
+            </ul>        <nav class="navigation">
+            <a href="#">
+                <img src="images/logo.png" alt="">
+                <img src="images/logo.png" alt="">
+            </a>
+            <ul id="navbar">
+                <li><a href="account.php">My Account</a></li>
+                <li><a href="eTransfer.php">E-Transfer</a></li>
+                <li><a href="contact.php">Contact</a></li>
             <div id="logout">
                 <a href=""></a>
             </div>

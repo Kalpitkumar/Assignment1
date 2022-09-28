@@ -4,55 +4,33 @@ session_start();
 
 if(!isset($_SESSION))
 {
-    header('location:men.php');
+    header('location:account.php');
 }
 else if(isset($_POST['submit']))
 {
     $_SESSION['mobileError'] = "";
-    if(isset($_POST['username']))
+    if(isset($_POST['username']) && isset($_POST['password']))
     {
         $name = $_POST['username'];
+        $password = $_POST['password'];
+        $passwordCount = strlen($password);
         if(preg_match("/^[a-zA-Z-' ]*$/",$name))
         {
-            $_SESSION['name'] = $name;
-            $_SESSION['expire'] = time() + (30*60);
-        }else{
-            $_SESSION['nameError'] = "Special Characters are not allowed !!";
-            header("Refresh:0");
+            if($passwordCount <= 8)
+            {
+                $_SESSION['name'] = $name;
+                $_SESSION['expire'] = time() + (30*60);
+            }
         }
     }
     else{
-        $_SESSION['nameError'] = "Please, enter username !!";
-        header("Refresh:0");
-    }
-    
-    if(isset($_POST['mobile']))
-    {
-        $mobile = $_POST['mobile'];
-        if(preg_match("/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/",$mobile))
-        {
-            $_SESSION['mobile'] = $mobile;
-            $_SESSION['expire'] = time() + (30*60);
-            $_SESSION['mobileError'] = "";
-        }else{
-            $_SESSION['mobileError'] = "Please, Follow the format (xxx-xxx-xxxx) !!";
-            header("Refresh:0");
-        }
-    }
-    
-    if(isset($_POST['address']))
-    {
-        $address = $_POST['address'];
-        $_SESSION['address'] = $address;
-        $_SESSION['expire'] = time() + (30*60);
-    }else{
-        $_SESSION['addressError'] = "Please, fill the address !!";
+        $_SESSION['nameError'] = "Please, enter username or password !!";
         header("Refresh:0");
     }
 
-    if($_SESSION['name'] != null && $_SESSION['mobile'] != null && $_SESSION['address'] != null)
+    if($_SESSION['name'] != null)
     {
-        header('location:men.php');
+        header('location:account.php');
     }
 }
 
@@ -77,9 +55,9 @@ else if(isset($_POST['submit']))
                 <img src="images/logo.png" alt="">
             </a>
             <ul id="navbar">
-                <li><a href="men.php">Men</a></li>
-                <li><a href="women.php">Women</a></li>
-                <li><a href="kids.php">Kids</a></li>
+                <li><a href="account.php">My Account</a></li>
+                <li><a href="eTransfer.php">E-Transfer</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
             <div id="logout">
                 <a href=""></a>
@@ -89,6 +67,9 @@ else if(isset($_POST['submit']))
 
         <!-- banner / Heading start -->
         <header class="banner">
+            <div class="bankLogo">
+                <img src="images/logo.png" alt="">
+            </div>
             <h1>Conestoga <strong>Bank</strong></h1>
             <p>MANAGE YOUR FINANCE AND SEND MONEY !</p>
         </header>
@@ -103,15 +84,9 @@ else if(isset($_POST['submit']))
                 <span id="name_error"></span>
                 <label class="errors" id="name_error"><?php if(isset($_SESSION['nameError']) != null){ echo $_SESSION['nameError']; } ?></label>
                 <div>
-                    <input type="text" name="mobile" id="mobile" placeholder="Enter Phone number (xxx-xxx-xxxx)" required>
+                    <input type="password" name="password" id="password" placeholder="Enter Password" required>
                 </div>
                 <span id="mobile_error"></span>
-                <label class="errors"><?php if(isset($_SESSION['mobileError']) != null){ echo $_SESSION['mobileError']; } ?></label>
-                <div>
-                    <input type="text" name="address" id="address" placeholder="Enter Address" required>
-                </div>
-                <span id="address_error"></span>
-                <label class="errors"><?php if(isset($_SESSION['addressError']) != null){ echo $_SESSION['addressError']; } ?></label>
                 <div>
                     <input type="submit" name="submit" class="submit_btn" value="Login">
                 </div>

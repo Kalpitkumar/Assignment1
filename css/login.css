@@ -1,14 +1,14 @@
-body{
+body {
   padding: 0%;
   margin: 0 auto;
-  background-image:linear-gradient(to right, #0b1017c9, #000000b8),url('../images/background1.jpg');
+  background-image: linear-gradient(to right, #0b1017c9, #000000b8), url('../images/background1.jpg');
   background-size: cover;
   background-attachment: fixed;
-  font-family:poppins;
+  font-family: poppins;
 }
 
 /*------ navigation bar------ */
-.navigation{
+.navigation {
   display: flex;
   padding: 0 20px;
   align-items: center;
@@ -18,28 +18,33 @@ body{
   box-shadow: 0 5px 30px #00000052;
   backdrop-filter: blur(12px);
 }
-.navigation img{
+
+.navigation img {
   width: 45px;
   height: 45px;
   border-radius: 50%;
 }
-.navigation #navbar li{
+
+.navigation #navbar li {
   list-style: none;
   display: inline-block;
   padding: 10px 30px;
   cursor: pointer;
 }
-.navigation #navbar li a{
+
+.navigation #navbar li a {
   color: white;
   font-size: 18px;
   text-decoration: none;
   letter-spacing: 1px;
 }
-.navigation #navbar li a:hover{
+
+.navigation #navbar li a:hover {
   color: #ECEE52;
   transition: 0.2s;
 }
-.navigation #logout a{
+
+.navigation #logout a {
   color: white;
   list-style: none;
   display: inline-block;
@@ -47,34 +52,39 @@ body{
   cursor: pointer;
   text-decoration: none;
 }
-.navigation #logout a:hover{
+
+.navigation #logout a:hover {
   color: white;
   transform: scale(1.1);
 }
 
 /*------ Banner------*/
-.bankLogo{
+.bankLogo {
   text-align: center;
 }
-.bankLogo img{
+
+.bankLogo img {
   width: 8%;
   height: 8%;
   border-radius: 50%;
   border: 3px solid rgb(15, 214, 15);
 }
-.banner{
+
+.banner {
   margin: 30px auto;
   color: white;
   text-shadow: 5px 6px 9px rgba(0, 0, 0, 0.332);
 }
-.banner h1{
+
+.banner h1 {
   margin: auto;
   text-align: center;
   font-weight: 700;
   font-size: 65px;
   letter-spacing: 0.5px;
 }
-.banner p{
+
+.banner p {
   margin: auto;
   text-align: center;
   font-size: 15px;
@@ -82,14 +92,16 @@ body{
   opacity: 0.9;
   letter-spacing: 8px;
 }
-.banner strong{
+
+.banner strong {
   color: #ECEE52;
 }
-.linedesign{
+
+.linedesign {
   margin-left: -30px;
 }
 
-.background{
+.background {
   width: 50%;
   color: white;
   margin: auto;
@@ -101,25 +113,31 @@ body{
   backdrop-filter: blur(10px);
 }
 
-.userform{
+#message {
+  margin-top: -5px;
+  padding-bottom: -25px;
+}
+
+.userform {
   margin: auto;
   text-align: center;
 }
 
-#username, #password{
+#username,
+#password {
   text-align: center;
   width: 50%;
   height: 4%;
   padding: 8px;
   margin: 1% 0;
   font-size: 20px;
-  font-family:poppins;
+  font-family: poppins;
   border: 1px solid rgb(63, 63, 63);
   border-radius: 10px;
   color: #000000;
 }
 
-.submit_btn{
+.submit_btn {
   font-weight: bold;
   width: 50%;
   height: 5%;
@@ -130,11 +148,12 @@ body{
   border: 1px solid #ffffff4d;
   background: #ffffff;
 }
-.submit_btn:hover{
+
+.submit_btn:hover {
   color: #ffffff;
   background: #000000e8;
 }
 
-.err{
+.err {
   color: red;
 }

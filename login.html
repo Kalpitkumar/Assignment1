@@ -42,9 +42,11 @@
         <!-- banner / Heading end -->
 
         <div class="background">
+            <marquee>
+                <p id="message"></p>
+            </marquee>
             <div class="userform">
                 <form method="post" name="loginForm" onsubmit="return validateLogin()">
-                    <label id="err" class="err"></label>
                     <div>
                         <input type="text" name="username" id="username" placeholder="Enter Username">
                     </div>
@@ -105,5 +107,8 @@
     <!-- footer end -->
 
 </body>
+<script>
+    displayWelcomeMessage();
+</script>
 
 </html>

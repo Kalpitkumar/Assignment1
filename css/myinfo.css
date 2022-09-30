@@ -1,0 +1,125 @@
+body{
+    padding: 0%;
+    margin: 0 auto;
+    background-image:linear-gradient(to right, #0b1017c9, #000000b8),url('../images/background3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family:poppins;
+  }
+  
+  /*------ navigation bar------ */
+  .navigation{
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff4d;
+    background: #b1b39215;
+    box-shadow: 0 5px 30px #00000052;
+    backdrop-filter: blur(12px);
+  }
+  .navigation img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  .navigation #navbar li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+  }
+  .navigation #navbar li a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+  .navigation #navbar li a:hover{
+    color: #ECEE52;
+    transition: 0.2s;
+  }
+  .navigation #logout a{
+    color: white;
+    list-style: none;
+    display: inline-block;
+    padding: 10px 0px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .navigation #logout a:hover{
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  /*------ Banner------*/
+  .bankLogo{
+    text-align: center;
+  }
+  .bankLogo img{
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    border: 3px solid rgb(15, 214, 15);
+  }
+  .banner{
+    margin: 30px auto;
+    color: white;
+    text-shadow: 5px 6px 9px rgba(0, 0, 0, 0.332);
+  }
+  .linedesign{
+    margin-left: -30px;
+  }
+
+  .background b{
+    color: white;
+    padding: 2%;
+  }
+
+  .mainDetails{
+    margin-top: 5%;
+  }
+
+  .background{
+    width: 50%;
+    margin: auto;
+  }
+
+  .socialMedia{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .socialMedia a img{
+    width: 40%;
+  }
+  .socialMedia a{
+    text-decoration: none;
+    color: white;
+  }
+  .special{
+    color: #b8d679e8;
+  }
+  .info{
+    color: white;
+    margin: auto;
+    padding: 3%;
+    border-radius: 12px;
+    border: 1px solid #ffffff4d;
+    background: #a7a99134;
+    box-shadow: 0 5px 30px #0000001a;
+    backdrop-filter: blur(8px);
+  }
+  
+  .info .details{
+    padding: 1% 2% 0 2%;
+  }
+
+  .details{ 
+    text-align: center;
+  }
+  .details p{
+    margin-top: 0%;
+  }

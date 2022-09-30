@@ -13,11 +13,11 @@ function validateLogin() {
         document.getElementById("password_error").innerHTML = ""
     }
 
-    if (name == "Conestogac" && password == "c123") {
+    if (name == "conestogac" && password == "c123") {
         window.location = "account.html";
         return false;
     } else {
-        alert("Please Enter Username(Conestogac) or Password(c123).");
+        alert("Please Enter Username(conestogac) or Password(c123).");
         return false;
     }
 }

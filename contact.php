@@ -14,17 +14,17 @@
     <main>
         <!-- Navigation Start -->
         <nav class="navigation">
-            <a href="#">
+        <a href="#">
                 <img src="images/logo.png" alt="">
             </a>
             <ul id="navbar">
-                <li><a href="account.html">Account Summary</a></li>
-                <li><a href="eTransfer.html">E-Transfer</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="account.php">Account Summary</a></li>
+                <li><a href="eTransfer.php">E-Transfer</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
             <div id="logout">
-                <a href="myinfo.html">My Account</a> &nbsp;
-                <a href="login.html">Logout</a>
+                <a href="myinfo.php">My Account</a> &nbsp;
+                <a href="login.php">Logout</a>
             </div>
         </nav>
         <!-- Navigation end -->
